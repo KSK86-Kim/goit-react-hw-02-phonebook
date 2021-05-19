@@ -5,11 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 import contats from './json/contacts.json';
 
 //////
-
-import Container from './components/Container';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import Container from './components/Container';
+import Section from './components/Section';
 
 //////
 import ContactForm from './components/ContactForm';
@@ -75,24 +75,27 @@ class App extends Component {
             <Fragment>
                 <Header />
                 <Main>
-                    <Container>
-                        <h1>Phonebook</h1>
-                        <ContactForm
-                            onFormSubmit={this.onFormSubmit}
-                            inputHandler={this.handleInputChange}
-                        />
-                    </Container>
-                    <Container>
-                        <h2>Filter</h2>
+                    <Section title="Phonebook">
                         <Container>
-                            <Filter filterHandler={this.handleFilterChange} />
+                            <ContactForm
+                                onFormSubmit={this.onFormSХватитubmit}
+                                inputHandler={this.handleInputChange}
+                            />
                         </Container>
-                        <h2>Contacts</h2>
-                        <ContactList
-                            contacts={this.getFilteredContacts()}
-                            deleteContactHandler={this.deleteConact}
-                        ></ContactList>
-                    </Container>
+                        <Container>
+                            <h2>Filter</h2>
+                            <Container>
+                                <Filter
+                                    filterHandler={this.handleFilterChange}
+                                />
+                            </Container>
+                            <h2>Contacts</h2>
+                            <ContactList
+                                contacts={this.getFilteredContacts()}
+                                deleteContactHandler={this.deleteConact}
+                            ></ContactList>
+                        </Container>
+                    </Section>
                 </Main>
                 <Footer />
             </Fragment>
