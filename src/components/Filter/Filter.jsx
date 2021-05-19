@@ -6,12 +6,12 @@ class Filter extends Component {
     render() {
         const { filterHandler } = this.props;
         return (
-            <div className={styles['filter']}>
-                <label className={styles['filter-label']}>
-                    Find contacts by name
+            <div>
+                <label className={styles['filter__label']}>
+                    Find contacts by Name
                     <br />
                     <input
-                        className={styles['filter-input']}
+                        className={styles['filter__input']}
                         type="text"
                         onChange={filterHandler}
                     />
@@ -22,7 +22,7 @@ class Filter extends Component {
 }
 
 Filter.propTypes = {
-    filterHandler: PropTypes.func,
+    filterNandler: PropTypes.func,
 };
 
 export default Filter;

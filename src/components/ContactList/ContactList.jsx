@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Contact from '../Contact';
 import PropTypes from 'prop-types';
+import Contact from '../Contact';
 import styles from './ContactList.module.css';
 
 class ContactList extends Component {
