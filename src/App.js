@@ -78,7 +78,7 @@ class App extends Component {
                     <Section title="Phonebook">
                         <Container>
                             <ContactForm
-                                onFormSubmit={this.onFormSХватитubmit}
+                                onFormSubmit={this.onFormSubmit}
                                 inputHandler={this.handleInputChange}
                             />
                         </Container>
